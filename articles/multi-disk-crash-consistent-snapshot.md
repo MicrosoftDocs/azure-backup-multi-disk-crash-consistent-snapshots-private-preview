@@ -41,7 +41,7 @@ Follow these steps:
 
    *This feature is only available with Enhanced Policy and if your subscription is enrolled for private preview.*
 
-   ![Screenshot shows how to enable crash consistency in Enhanced Policy for Azure VM backup.](https://github.com/MicrosoftDocs/azure-backup-multi-disk-crash-consistent-snapshots-private-preview/articles/media/enable-crash-consistency-in-enhanced-policy.png)
+   ![Screenshot shows how to enable crash consistency in Enhanced Policy for Azure VM backup.](https://github.com/MicrosoftDocs/azure-backup-multi-disk-crash-consistent-snapshots-private-preview/blob/main/articles/media/enable-crash-consistency-in-enhanced-policy.png)
 
 2. Enable [Azure Backup on the VM using this Enhanced Policy](https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-enhanced-policy?tabs=azure-portal) if not already enabled. Azure VMs with this policy will take crash-consistent snapshots only.
 
