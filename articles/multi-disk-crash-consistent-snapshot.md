@@ -16,21 +16,21 @@ To enroll your subscription for this private preview feature, fill [this form](h
 
 ***Important***
 
-*The regions text box in the enrollment form is to help the Azure Backup team to understand priority order of the regions for enabling this feature only. However, once your subscription is enrolled, this private preview feature will be available for the subscription in all the regions where this feature is supported. Once this feature is enabled in new regions, they with be available for for the subscription automatically.*
+*The **regions** text box in the enrollment form is only to help the Azure Backup team to understand priority order of the regions for enabling this feature only. However, once your subscription is enrolled, this private preview feature will be available for the subscription in all regions where this feature is supported. This also implies that if Azure Backup enables this feature in new regions, the enrolled subscription will also have this feature available in the new regions.*
 
 ## Regions availability
 
-This feature is currently deployed in West Central US and West Europe.
+This feature is currently deployed in West Central US and West Europe. If the feature is enabled in other regions, the availability list will be updated.
 
 ## Support matrix 
 
-- All Azure Public regions areis supported.
-- Multi-disk crash-consistency is supported with [Enhanced Policy](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fazure%2Fbackup%2Fbackup-azure-vms-enhanced-policy%3Ftabs%3Dazure-portal&data=05%7C01%7Cshsangal%40microsoft.com%7Cf79ec5af57d347ad240608db9402d03c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638266512130715342%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=Hqy9bGGKCZayuTLWiqh2nMAR6vFr6G1a2V8tOZ%2FVsxc%3D&reserved=0) only. 
-- Trusted Launch VM is supported.
-- Managed Disks of size 4 TB and above (striped disks) are not supported.  
-- Managed-disks with paid bursting (striped disks) are not supported. 
-- Ultra-disks, Premium v2 SSD, Ephemeral OS disks, Shared disks, and Write Accelerated disks are not supported. 
-  
+- All Azure Public regions can be supported.
+- Multi-disk crash-consistency is supported only with [Enhanced Policy](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fazure%2Fbackup%2Fbackup-azure-vms-enhanced-policy%3Ftabs%3Dazure-portal&data=05%7C01%7Cshsangal%40microsoft.com%7Cf79ec5af57d347ad240608db9402d03c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638266512130715342%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=Hqy9bGGKCZayuTLWiqh2nMAR6vFr6G1a2V8tOZ%2FVsxc%3D&reserved=0). 
+- Trusted Launch VMs are supported.
+- Managed-disks of size *4 TB* and above (striped disks) aren't supported.
+- Managed-disks with paid bursting (striped disks) aren't supported.
+- Ultra-disks, Premium v2 SSD, Ephemeral OS disks, Shared disks, and Write Accelerated disks aren't supported.
+
 ## Configure crash-consistency
 
 Follow these steps:
@@ -47,6 +47,6 @@ Follow these steps:
 
 ***Note***
 
-- *If you protect a VM using the above policy in any of the regions where Azure Backup has deployed this feature, VM will have crash-consistent snapshots only. Even if Azure Backup deploys this feature in new regions and you have a VM protected using the above backup policy in any of those regions, it'll also have crash-consistent snapshots only.*
+- *If you protect a VM using the above policy in any of the regions where Azure Backup has deployed this feature, VM will have crash-consistent snapshots only. Even if Azure Backup deploys this feature in new regions and you have a VM protected using the above Backup Policy in any of those regions, it'll also have crash-consistent snapshots only.*
 - *If you protect a VM using the above policy in any region where Azure Backup has not deployed this feature, it will continue with the default app-consistent snapshot.*
-- *VMs in regions where this feature is enabled by Azure Backup and which are in the enrolled subscription and protected using Enhanced Policy (but not with a policy created with crash-consistent only option) will also have crash-consistent snapshots generated if application-consistent snapshot generations fails due to some issues.*
+- *VMs in regions where this feature is enabled by Azure Backup and which are in the enrolled subscription and protected using Enhanced Policy (but not with a policy created with option ***Only crash-consistent snapshot (private preview)*** as mentioned above) will also have crash-consistent snapshots generated if application-consistent/ file-consistent snapshot generation fails due to some issues.*
