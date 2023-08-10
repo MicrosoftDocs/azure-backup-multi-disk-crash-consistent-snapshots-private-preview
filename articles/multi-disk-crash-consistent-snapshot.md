@@ -30,6 +30,8 @@ This feature is currently deployed in West Central US and West Europe. If the fe
 - Managed-disks of size *4 TB* and above (striped disks) aren't supported.
 - Managed-disks with paid bursting (striped disks) aren't supported.
 - Ultra-disks, Premium v2 SSD, Ephemeral OS disks, Shared disks, and Write Accelerated disks aren't supported.
+- Disks with host-caching enabled aren't supported. If any disks with host-caching attached to the VM, you may see consistency issues.
+
 
 ## Configure crash-consistency
 
