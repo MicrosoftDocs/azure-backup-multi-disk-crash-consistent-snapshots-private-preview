@@ -30,8 +30,11 @@ This feature is currently deployed in West Central US and West Europe. If the fe
 - Managed-disks of size *4 TB* and above (striped disks) aren't supported.
 - Managed-disks with paid bursting (striped disks) aren't supported.
 - Ultra-disks, Premium v2 SSD, Ephemeral OS disks, Shared disks, and Write Accelerated disks aren't supported.
-- Disks with host-caching enabled aren't supported. If any disks with host-caching attached to the VM, you may see consistency issues.
 
+
+***Note***
+
+For disks configured with read/write host caching, multi-disk crash consistency may not function because writes occurring while the snapshot is taken may not be considered by Azure Storage. If maintaining consistency is crucial, we recommend you not to opt for this private preview and use the [default behavior](https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-introduction#snapshot-consistency).
 
 ## Configure crash-consistency
 
@@ -50,5 +53,6 @@ Follow these steps:
 ***Note***
 
 - *If you protect a VM using the above policy in any of the regions where Azure Backup has deployed this feature, VM will have crash-consistent snapshots only. Even if Azure Backup deploys this feature in new regions and you have a VM protected using the above Backup Policy in any of those regions, it'll also have crash-consistent snapshots only.*
-- *If you protect a VM using the above policy in any region where Azure Backup has not deployed this feature, it will continue with the default app-consistent snapshot.*
+- *If you protect a VM using the above policy in any region where Azure Backup hasn't deployed this feature, it will continue with the [default behavior](https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-introduction#snapshot-consistency).*
 - *VMs in regions where this feature is enabled by Azure Backup and which are in the enrolled subscription and protected using Enhanced Policy (but not with a policy created with option ***Only crash-consistent snapshot (private preview)*** as mentioned above) will also have crash-consistent snapshots generated if application-consistent/ file-consistent snapshot generation fails due to some issues.*
+
