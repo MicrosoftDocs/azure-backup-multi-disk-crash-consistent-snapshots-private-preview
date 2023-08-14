@@ -34,7 +34,7 @@ This feature is currently deployed in West Central US and West Europe. If the fe
 
 ***Note***
 
-For disks configured with read/write host caching, multi-disk crash consistency may not function because writes occurring while the snapshot is taken may not be considered by Azure Storage. If maintaining consistency is crucial, we recommend you not to opt for this private preview and use the [default behavior](https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-introduction#snapshot-consistency).
+*For disks configured with read/write host caching, multi-disk crash consistency may not function because writes occurring while the snapshot is taken may not be considered by Azure Storage. If maintaining consistency is crucial, we recommend you not to opt for this private preview and use the [default behavior](https://learn.microsoft.com/en-us/azure/backup/backup-azure-vms-introduction#snapshot-consistency).*
 
 ## Configure crash-consistency
 
