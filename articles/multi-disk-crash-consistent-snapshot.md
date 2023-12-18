@@ -20,7 +20,7 @@ To enroll your subscription for this private preview feature, fill [this form](h
 
 ## Regions availability
 
-This feature is currently deployed in ^all Azure public regions*. However, to use the feature, subscription allow-listing is required.
+This feature is currently deployed in *all Azure public regions*. However, to use the feature, subscription allow-listing is required.
 
 ## Support matrix 
 
