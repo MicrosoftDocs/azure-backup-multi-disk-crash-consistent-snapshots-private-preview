@@ -20,11 +20,11 @@ To enroll your subscription for this private preview feature, fill [this form](h
 
 ## Regions availability
 
-This feature is currently deployed in West Central US and West Europe. If the feature is enabled in other regions, the availability list will be updated.
+This feature is currently deployed in ^all Azure public regions^. However, to use the feature, subscription allow-listing is required.
 
 ## Support matrix 
 
-- All Azure Public regions can be supported.
+- All Azure Public regions are supported.
 - Multi-disk crash-consistency is supported only with [Enhanced Policy](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fazure%2Fbackup%2Fbackup-azure-vms-enhanced-policy%3Ftabs%3Dazure-portal&data=05%7C01%7Cshsangal%40microsoft.com%7Cf79ec5af57d347ad240608db9402d03c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638266512130715342%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=Hqy9bGGKCZayuTLWiqh2nMAR6vFr6G1a2V8tOZ%2FVsxc%3D&reserved=0). 
 - Trusted Launch VMs are supported.
 - Managed-disks of size *4 TB* and above (striped disks) aren't supported.
